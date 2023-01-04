@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #778899;
+            color: white;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <script>
+        /* 
+    sim '' "" ´´
+        */
+        // Apenas numeros inteiros
+        var n1 = Number.parseInt(window.prompt('Digite um número: '))
+        var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+        var soma = n1 + n2
+        window.alert('A soma é ' + soma)
+        
+        // ele aceita o nmero e decide se é inteiro ou se é float
+        n1 = Number(window.prompt('Digite um número: '))
+        n2 = Number(window.prompt('Digite outro número: '))
+        soma = n1 + n2
+        window.alert(`Resultado: ${soma}`)
+        window.alert('A soma é ' + soma.toString())   
+        window.alert('A soma é ' + String(soma))   
+
+    </script>
+</body>
+</html>
