@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="caixaVelocidade" id="caixaVelocidade">
+    <input type="button" value="verificar" onclick="verificar()">
+
+    <script>
+        var velocidade = Number(document.getElementById('caixaVelocidade').value)
+        function verificar() {
+            if (velocidade > 60) {
+                window.alert('Multado')
+            }  else {
+                window.alert('Tudo ok')
+            }
+        }
+    </script>
+</body>
+</html>
