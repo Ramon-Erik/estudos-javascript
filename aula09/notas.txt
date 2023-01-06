@@ -1,0 +1,29 @@
+Modulo C aula 1 (9)
+
+DOM -> document object model
+
+modelo de objetos para documentos, conjundo de objetos dentro do navegador que da acesso a componentes internos dentro do site
+
+arvore dom começa na raiz -> window (tudo esta dentro da window) 
+
+window -> (location -> (
+    url, pagina atual, localização dos arquivos),
+    document -> (documenti atual), 
+    history -> (historico de navegação)
+ )
+
+ document -> html (parent) -> (head, -> tags dentro da head
+  body -> tags dentro do body
+  ) Child
+
+5 metodos para selecionar um elemento da arvore
+
+marca -> getElementsByTagName() -> mais de um objeto, pois seleciona pelas tags
+
+id -> getElementById()
+
+nome -> getElementsByName()
+
+classe -> getElementsByClassName()
+
+seletor -> querySelector() querySelectorAll()
