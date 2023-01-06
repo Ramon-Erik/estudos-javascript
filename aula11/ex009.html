@@ -7,5 +7,20 @@
     <title>NACIONALIDADES</title>
 </head>
 <body>
+    <h1>Nacionalidades</h1>
+    informe sua nacionalidade: <input type="text" name="caixaNacionalidade" id="caixaNaci">
+    <input type="button" value="enviar" onclick="verificar()">
+
+    <script>
+        
+        function verificar() {
+            var texto = String(window.document.getElementById('caixaNaci').value)
+            if (texto.toLocaleLowerCase() == 'br') {
+                window.alert('yo also hablo spanish')
+            } else {
+                window.alert("sorry don't espiko gringo")
+            }
+        }
+    </script>
 </body>
 </html>
