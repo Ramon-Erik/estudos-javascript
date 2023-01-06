@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o dom</title>
+    <style>
+        body {
+            background: lightslategray;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com o DOM</h1>
+    <p>Aqui vai o resultado </p>
+    <p>aprendendo a usar <strong>DOM</strong> em javascript</p>
+    <div id="esse">Clique em mim</div>
+    <div name="esse">Clique em mim</div>
+    <div class="esse">Clique em mim</div>
+    <script>
+        window.document.write('olá mundo')
+        window.document.write('<br>')
+        window.document.write(window.document.characterSet)
+        window.document.write('<br>')
+        window.document.write(window.navigator.appName)
+        window.document.write('<br>')
+        window.document.write(window.document.URL)
+        window.document.write('<br>')
+
+
+        var p1 = window.document.getElementsByTagName('p')[1] // variavel p recebe os paragrafos e o 0 entre colchetes diz que é so o primeiro paragrafo
+        window.document.write(`no primiro paragrafo esta escrito: ${p1.innerText}`)
+        window.document.write('<br>')
+        p1.style.color = 'white'
+        
+        var corpo  = window.document.body
+        corpo.style.color = 'blue'
+
+        document.write(p1.innerHTML) //escreve o a primeira tag p. innerText escreve so o conteudo, ignorando outras tags
+
+        var dive = window.document.getElementById('esse')
+        dive.style.background = 'yellow'
+        dive.innerText = 'yellow'
+        
+        var div1 = window.document.getElementsByName('esse')[0]
+        div1.innerText = 'essa div tem nome esse'
+        var div2 = window.document.getElementsByClassName('esse')[0]
+        div2.innerText = 'essa div tem a class esse'
+        
+        var objeto1 = window.document.querySelector('#esse')
+        objeto1.innerText = 'essa div tem o id esse'
+
+        var objeto1 = window.document.querySelector('.esse')
+        objeto1.innerText = 'essa div tem o . esse'
+        
+
+    </script>
+</body>
+</html>
