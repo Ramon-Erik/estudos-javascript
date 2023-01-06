@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #area {
+            background: lightseagreen;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja
+    </div>
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', clicar)
+
+        function clicar() {
+            area.innerHTML = 'voce <strong>clicou</strong>'
+        }
+        
+        function entrar() {
+            area.innerHTML = 'voce <strong>entrou</strong>'
+        }
+        
+        function sair() {
+            area.innerHTML = 'voce <strong>saiu</strong>'
+        }
+    </script>
+</body>
+</html>
