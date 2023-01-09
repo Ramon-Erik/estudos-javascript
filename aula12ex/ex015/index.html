@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Sua idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Verificador de idade</h1>
+    <main>
+        <section>
+            <div>
+                <label for="anoUsuario">Ano de nascimento:</label>
+                <input type="number" name="anoUsuario" id="anoUsuario">
+            </div>
+            <div>
+                <label for="sexoUsuario">Sexo:</label>
+                <input type="radio" name="sexoUsuario" id="sexoUsuario">
+            </div>
+            <input type="submit" value="analizar" onclick="analizar()">
+        </section>
+        <section>
+            <div id="text">
+                <p>preencha os dados acima para ver o resultado</p>
+            </div>
+            <div id="imagem"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Desenvolvido por Ramon</p>
+    </footer>
+</body>
+</html>
