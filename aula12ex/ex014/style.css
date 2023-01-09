@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+main {
+    width: 550px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    margin: auto;
+    padding: 10px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 2px 11px 5px #00000029;
+}
+
+main img {
+    width: 350px;
+    height: 350px;
+}
+
+#foto-horario {
+    background: #f8df24 url(imagens/dia.jpg);
+    /* background-size: contain; */
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+}
