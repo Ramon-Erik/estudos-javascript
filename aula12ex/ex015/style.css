@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #0066ff;
+    color: #fff;
+}
+
+main {
+    background-color: #fff;
+    color: #000;
+    width: 450px;
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+main div {
+    margin: 15px 0;
+}
