@@ -3,8 +3,6 @@ console.log(horas)
 var pHora = document.getElementById('hora')
 var divFoto = document.getElementById('foto-horario')
 
-horas = 12
-
 pHora.innerText = `Agora são ${horas} horas.`
 
 if (horas >= 5 && horas < 12)  {
