@@ -24,7 +24,7 @@ main img {
     height: 350px;
 }
 
-main #foto-horario {
+#foto-horario {
     background: yellow url(imagens/tarde.jpg);
     /* background-size: contain; */
     border-radius: 50%;
