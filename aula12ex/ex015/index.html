@@ -13,16 +13,18 @@
         <section>
             <div>
                 <label for="anoUsuario">Ano de nascimento:</label>
-                <input type="number" name="anoUsuario" id="anoUsuario">
+                <input type="number" name="anoUsuario" id="anoUsuario" required>
             </div>
             <div>
-                <label for="sexoUsuario">Sexo:</label>
-                <input type="radio" name="sexoUsuario" id="sexoUsuario">
+                <p>Sexo:
+                    <input type="radio" name="sexoUsuario" id="sexoM"><label for="sexoM">Masculino</label>
+                    <input type="radio" name="sexoUsuario" id="sexoF"><label for="sexoF">Feminino</label>
+                </p>
             </div>
             <input type="submit" value="analizar" onclick="analizar()">
         </section>
         <section>
-            <div id="text">
+            <div id="texto">
                 <p>preencha os dados acima para ver o resultado</p>
             </div>
             <div id="imagem"></div>
@@ -31,5 +33,6 @@
     <footer>
         <p>&copy; Desenvolvido por Ramon</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
