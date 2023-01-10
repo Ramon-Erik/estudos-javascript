@@ -18,3 +18,7 @@ main {
 main div {
     margin: 15px 0;
 }
+
+#anoUsuario {
+    width: 60px;;
+}
