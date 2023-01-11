@@ -1,0 +1,11 @@
+for (inicio; teste; incremento) {
+    bloco de codigo
+}
+
+ex
+
+for (var c1; c <= 10; c++) {
+    blocode codigo
+}
+
+usar debug: adiciona um breackpoint na linha, aperta f5, e aperat f10 
