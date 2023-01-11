@@ -4,5 +4,9 @@ function contar() {
     var passo = document.getElementById('passo').value
     var texto = document.getElementById('texto')
     
-    
+    texto.innerText = ini
+    for (var c = ini; f; c++) {
+        texto.innerText += ' -> ' + c
+        console.log(c)
+    }
 }
