@@ -26,7 +26,6 @@ main img {
 
 #foto-horario {
     background: #f8df24 url(imagens/dia.jpg);
-    /* background-size: contain; */
     border-radius: 50%;
     height: 350px;
     width: 350px;
