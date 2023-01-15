@@ -11,11 +11,17 @@ function contar() {
             passo = 1
         }
         var texto = document.getElementById('texto')
-
         texto.innerText = ini
-
-        for (ini; ini <= f; ini += passo) {
-            texto.innerText += ` 👉 ${ini}`
+        // contagem crescente
+        if (ini < f) {
+            for (ini; ini <= f; ini += passo) {
+                texto.innerText += ` 👉 ${ini}`
+            }
+        // contagem decrescente
+        } else {
+            for (ini; ini >= f; ini -=passo) {
+                texto.innerText += ` 👉 ${ini}`
+            }
         }
         texto.innerText += ' 🏁'
     }
