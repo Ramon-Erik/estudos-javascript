@@ -24,6 +24,7 @@ main div {
 }
 
 #conteudo {
-    width: auto;
+    width: 100px;
+    margin: auto;
     padding: 10px;
 }
