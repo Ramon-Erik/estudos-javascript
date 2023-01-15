@@ -19,10 +19,11 @@ main div {
     margin: 15px 0;
 }
 
-.inputNumber {
+#inum {
     width: 60px;
 }
 
 #conteudo {
+    width: auto;
     padding: 10px;
 }
