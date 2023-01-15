@@ -13,3 +13,6 @@ num.length
 
 // organizae em ordem crescente
 num.sort()
+
+// buscar valor
+num.indexOf(7)
