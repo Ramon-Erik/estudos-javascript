@@ -19,13 +19,17 @@ function addNum() {
 function analizar() {
     let sum = 0
     let med = 0
-    for (let item in nums) {
-        sum += Number(nums[item])
+    if (nums.length < 1) {
+        window.alert('ERRO! Adicione algum valor.')
+    } else {
+        for (let item in nums) {
+            sum += Number(nums[item])
+        }
+        med = sum / nums.length
+        texto.innerHTML = `<p>Ao todo temos ${nums.length} números</p>`
+        texto.innerHTML += `<p>O maior valor informado foi ${Math.max.apply(null, nums)}</p>`
+        texto.innerHTML += `<p>O menor valor informado foi ${Math.min.apply(null, nums)}</p>`
+        texto.innerHTML += `<p>Somando tudo, temos: ${sum}</p>`
+        texto.innerHTML += `<p>Temos uma média: ${med}</p>`
     }
-    med = sum / nums.length
-    texto.innerHTML = `<p>Ao todo temos ${nums.length} números</p>`
-    texto.innerHTML += `<p>O maior valor informado foi ${Math.max.apply(null, nums)}</p>`
-    texto.innerHTML += `<p>O menor valor informado foi ${Math.min.apply(null, nums)}</p>`
-    texto.innerHTML += `<p>Somando tudo, temos: ${sum}</p>`
-    texto.innerHTML += `<p>Temos uma média: ${med}</p>`
 }
