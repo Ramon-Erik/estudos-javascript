@@ -2,17 +2,19 @@ let nums = []
 let texto = document.getElementById('texto')
 
 function addNum() {
-    let num = document.getElementById('inum').value
+    let num = document.getElementById('inum')
     let inums = document.getElementById('inums')
-    if (num < 1 || num > 100 || nums.indexOf(num) >= 0) {
+    if (num.value < 1 || num.value > 100 || nums.indexOf(num.value) >= 0) {
         window.alert('ERRO! Número inválido ou já adicionado.')
     } else {
-        nums.push(num)
+        nums.push(num.value)
         let opc = document.createElement('option')
-        opc.innerText = `Valor ${num} adicionado.`
-        opc.value = `v${num}`
+        opc.innerText = `Valor ${num.value} adicionado.`
+        opc.value = `v${num.value}`
         inums.appendChild(opc)
         texto.innerHTML = ''
+        num.value= ''
+        document.getElementById('inum').focus() 
     }
 }
 
@@ -22,8 +24,8 @@ function analizar() {
     if (nums.length < 1) {
         window.alert('ERRO! Adicione algum valor.')
     } else {
-        for (let item in nums) {
-            sum += Number(nums[item])
+        for (let i in nums) {
+            sum += Number(nums[i]) 
         }
         med = sum / nums.length
         texto.innerHTML = `<p>Ao todo temos ${nums.length} números</p>`
