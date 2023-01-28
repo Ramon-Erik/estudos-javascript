@@ -16,23 +16,82 @@ class CalcController {
             this.setDisplayTime()
         }, 1000);
     }
-    addEventListenerAll(element, events, fn){
+
+    addEventListenerAll(element, events, fn) {
         events.split(' ').forEach(event => {
             element.addEventListener(event, fn, false)
         })
     }
 
-    clearAll(){
+    clearAll() {
         this._operation = []
     }
-    clearEntry(){
+    clearEntry() {
         this._operation.pop()
     }
-    addOperation(value){
-        this._operation.push(value)
-        console.log(this._operation)
+
+    getLastOperation() {
+        console.log(`Returning last operation: ${this._operation[this._operation.length - 1]} array: ${this._operation}`)
+        return this._operation[this._operation.length - 1]
     }
-    setError(){
+
+    isOperator(value) {
+        console.log(`verifiyng if ${value} is an opeator... ${['%', '-', '*', '/', '+'].indexOf(value) > -1}`)
+        return ['%', '-', '*', '/', '+'].indexOf(value) > -1
+    }
+
+    setLastOperation(value) {
+        this._operation[this._operation.length - 1] = value
+    }
+
+    calc() {
+        let last = this._operation.pop()
+        let result = eval(this._operation.join(''))
+        this._operation = [result, last]
+    }
+
+    pushUpoeration(value){
+        console.log(`Adding the operator ${value}`)
+        this._operation.push(value)
+        if (this._operation.length > 3) {
+            this.calc()
+        }
+    }
+
+    setLastNumberToDisplay() {
+        
+    }
+
+    addOperation(value) {
+        console.log(`Adding a value: ${value}`)
+        console.log(`Verifyng if is a string... ${isNaN(this.getLastOperation())}`)
+        if (isNaN(this.getLastOperation())) {
+            // here comes the things that arent number
+            if (this.isOperator(value)) {
+                // adding operators
+                console.log(`Adding the operator ${value}`)
+                this.setLastOperation(value)
+            } else if (isNaN(value)){
+                // adding ?
+                console.log(value)
+            } else {
+                // adding a number, because isNaN([]) == undefined
+                this.pushUpoeration(value)
+            }
+        } else {
+            if (this.isOperator(value)) {
+                // adding operators
+                this.pushUpoeration(value)
+            } else {
+                let newValue = this.getLastOperation().toString() + value.toString()
+                this.setLastOperation(parseInt(newValue))
+
+                this.setLastNumberToDisplay()
+            }
+        }
+        console.log(`Finished process... ${this._operation}`)
+    }
+    setError() {
         this.displayCalc = 'error'
     }
 
@@ -45,14 +104,24 @@ class CalcController {
                 this.clearEntry()
                 break
             case 'porcento':
+                this.addOperation('%')
                 break
             case 'divisao':
+                this.addOperation('/')
                 break
             case 'multiplicacao':
+                this.addOperation('*')
                 break
             case 'subtracao':
+                this.addOperation('-')
                 break
             case 'soma':
+                this.addOperation('+')
+                break
+            case 'ponto':
+                this.addOperation('.')
+                break
+            case 'igual':
                 break
             case '0':
             case '1':
@@ -67,17 +136,16 @@ class CalcController {
                 this.addOperation(parseInt(value))
                 break
             default:
-                console.log(value)
                 this.setError()
                 break
         }
     }
 
-    initButtonsEvents(){
+    initButtonsEvents() {
         let buttons = document.querySelectorAll('#buttons > g, #parts > g')
-        buttons.forEach((btn, index)=>{
+        buttons.forEach((btn, index) => {
             this.addEventListenerAll(btn, 'click drag', event => {
-                
+
                 let textBtn = btn.className.baseVal.replace('btn-', '')
                 this.execBtn(textBtn)
 
@@ -88,34 +156,36 @@ class CalcController {
         })
     }
 
-    setDisplayTime(){
-        this.displayDate = this.currentDate.toLocaleDateString(this.locale, 
-            {day:'2-digit',
-            month:'short',
-            year:'numeric'}
+    setDisplayTime() {
+        this.displayDate = this.currentDate.toLocaleDateString(this.locale,
+            {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric'
+            }
         )
         this.displayTime = this.currentDate.toLocaleTimeString(this.locale)
     }
     // time
-    get displayTime(){
+    get displayTime() {
         return this._timeEl.innerHTML
     }
-    set displayTime(value){
+    set displayTime(value) {
         return this._timeEl.innerHTML = value
     }
 
     // date (shown) 
-    get displayDate(){
+    get displayDate() {
         this._dateEl.innerHTML
     }
-    set displayDate(value){
+    set displayDate(value) {
         this._dateEl.innerHTML = value
     }
     // display
-    get displayCalc(){
+    get displayCalc() {
         return this._displayCalcEl.innerHTML
     }
-    set displayCalc(value){
+    set displayCalc(value) {
         return this._displayCalcEl.innerHTML = value
     }
 
