@@ -1,5 +1,7 @@
 class CalcController {
     constructor() {
+        this._lastOperator = ''
+        this._lastNumber = ''
         this._operation = []
         this._locale = 'pt-BR'
         this._displayCalcEl = document.querySelector('#display')
@@ -47,12 +49,24 @@ class CalcController {
         this._operation[this._operation.length - 1] = value
     }
 
+    getResult() {
+        return eval(this._operation.join(''))
+    }
+
     calc() {
         let last = ''
+        this._lastNumber = this.getResult()
+
         if (this._operation.length > 3) {
             last = this._operation.pop()
+            this._lastOperator = this.getLastItem()
         }
-        let result = eval(this._operation.join(''))
+
+        if (this._operation.length == 3) {
+            this._lastNumber = this.getLastItem(false)
+        }
+        console.log('>>>lastOperator' +this._lastOperator)
+        console.log('>>>lastNumber' +this._lastNumber)
 
         if (last == '%') {
             result /= 100
@@ -60,11 +74,11 @@ class CalcController {
         } else {
             this._operation = [result]
             if (last) this._operation.push(last)
-        } 
+        }
         this.setLastNumberToDisplay()
     }
 
-    pushUpoeration(value){
+    pushUpoeration(value) {
         console.log(`Adding the operator ${value}`)
         this._operation.push(value)
         if (this._operation.length > 3) {
@@ -73,14 +87,19 @@ class CalcController {
         }
     }
 
-    setLastNumberToDisplay() {
-        let lastNumber
-        for (let i = this._operation.length-1; i >= 0; i--) {
-            if (!this.isOperator(this._operation[i])){
-                lastNumber = this._operation[i]
-                break
+    getLastItem(isOperator = true) {
+        let lastItem
+        for (let i = this._operation.length - 1; i >= 0; i--) {
+                if (this.isOperator(this._operation[i]) == isOperator) {
+                    lastItem = this._operation[i]
+                    break
             }
         }
+        return lastItem
+    }
+
+    setLastNumberToDisplay() {
+        let lastNumber = this.getLastItem(false)
         if (!lastNumber) lastNumber = 0
         this.displayCalc = lastNumber
     }
@@ -94,7 +113,7 @@ class CalcController {
                 // adding operators
                 console.log(`Adding the operator ${value}`)
                 this.setLastOperation(value)
-            } else if (isNaN(value)){
+            } else if (isNaN(value)) {
                 // adding ?
                 console.log(value)
             } else {
@@ -112,6 +131,7 @@ class CalcController {
             }
         }
         console.log(`Finished process... ${this._operation}`)
+        console.log('--------' + this._operation + '--------')
         this.setLastNumberToDisplay()
     }
     setError() {
