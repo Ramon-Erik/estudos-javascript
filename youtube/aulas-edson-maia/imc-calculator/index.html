@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h2>What are yours...</h2>
+        <form method="post">
+            <div class="line-form">
+                <label for="iHeight">Height (cm)</label>
+                <input type="number" name="height" id="iHeight" min="100" max="200" required>
+            </div>
+            <div class="line-form"> 
+                <label for="iWeight">Weight (KG)</label>
+                <input type="number" name="weight" id="iWeight" min="1" step=".10" required>
+            </div>
+            <div class="line-form">
+                <textarea name="imc" id="iImc" cols="15" rows="1" disabled>Press Calculate</textarea>
+            </div>
+            <div class="line-form">
+                <button id="calc" onclick="calculateBMI(event)">Calculate</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        <p>
+            &copy; developed by Ramon-Erik
+        </p>
+    </main>
+    <script src="calculator.js"></script>
+</body>
+</html>
