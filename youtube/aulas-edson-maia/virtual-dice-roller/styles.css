@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #2e5fbb;
+    background-color: #FFA20D;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
@@ -15,26 +15,40 @@ body {
 }
 
 main {
+    width: 300px;
     padding: 30px;
     border-radius: 10px;
     background-color: white;
     text-align: center;
-    position: relative;
 }
 
 main #number {
-    display: inline-block;
-    padding:10px;
-    font-size: 28px;
-    z-index: 2;
-}
-
-main #backg {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #FFD100;
     height: 45px;
     width: 45px;
-    background-color: #3975e4;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+main .dice {
+    padding: 30px;
+}
+
+main img {
+    height: 150px;
+}
+
+main button#rollerBtn {
+    height: 45px;
+    width: 56px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.034);
+    border-radius: 10px;
+    background-color: #E87100;
+    color: white;
+    font: inherit;
 }

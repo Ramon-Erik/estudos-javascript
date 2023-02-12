@@ -9,12 +9,20 @@
 </head>
 <body>
     <main>
-        <h1>Virtual Dice With 6 faces</h1>
+        <h1>Dice With 6 faces</h1>
         <div id="number">
-            <div id="backg"></div>
-            1
+            <p>?</p>
         </div>
+        <div class="dice">
+            <img src="assets/dice/0.png" alt="interrogative symbol">
+        </div>
+        <button id="rollerBtn" onclick="playSound(), roll()" onkeypress="playSound(), roll()">
+            roll
+        </button>
     </main>
+    <footer>
+        <p>&copy; Developed by Ramon-Erik</p>
+    </footer>
     <script src="roll.js"></script>
 </body>
 </html>
