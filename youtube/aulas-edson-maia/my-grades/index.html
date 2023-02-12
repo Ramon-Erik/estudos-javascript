@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grades | calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>What are yours...?</h1>
+        <form action="">
+            <div class="line-form">
+                <label for="iGradeOne">First grade:</label>
+                <input type="number" name="gradeOne" class="numb" id="iGradeOne" required min="1" max="10" step=".1">
+            </div>
+            <div class="line-form">
+                <label for="iGradeTwo">Second grade:</label>
+                <input type="number" name="gradeTwo" class="numb" id="iGradeTwo" required min="1" max="10" step=".1">
+            </div>
+            <div class="line-form">
+                <label for="iGradeThree">Third grade:</label>
+                <input type="number" name="gradeThree" class="numb" id="iGradeThree" required min="1" max="10" step=".1">
+            </div>
+            <div class="line-form btns">
+                <button type="button" id="calc">Calculate</button>
+                <button type="reset">Clear</button>
+            </div>
+            <div class="line-form btns">
+                <textarea name="status" id="iStatus" cols="29" rows="1" hidden disabled>Your situation: ...</textarea>
+            </div>
+
+        </form>
+        <p>
+            &copy; developed by Ramon-Erik
+        </p>
+    </main>
+    <script src="calc.js"></script>
+</body>
+</html>
