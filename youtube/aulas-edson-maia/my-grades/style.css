@@ -60,4 +60,11 @@ main .btns {
     margin: 5px 0;
 }
 
+main #media {
+    margin: auto;
+    border-radius: 10px;
+    width: 80%;
+    padding: 2px;
+}
+
 /* classes to be added with js */
