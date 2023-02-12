@@ -13,15 +13,15 @@
         <form action="">
             <div class="line-form">
                 <label for="iGradeOne">First grade:</label>
-                <input type="number" name="gradeOne" class="numb" id="iGradeOne" required min="1" max="10" step=".1">
+                <input type="number" name="gradeOne" class="numb" id="iGradeOne" required min="1" max="10" step=".1" onblur="numbValidate(this)">
             </div>
             <div class="line-form">
                 <label for="iGradeTwo">Second grade:</label>
-                <input type="number" name="gradeTwo" class="numb" id="iGradeTwo" required min="1" max="10" step=".1">
+                <input type="number" name="gradeTwo" class="numb" id="iGradeTwo" required min="1" max="10" step=".1" onblur="numbValidate(this)">
             </div>
             <div class="line-form">
                 <label for="iGradeThree">Third grade:</label>
-                <input type="number" name="gradeThree" class="numb" id="iGradeThree" required min="1" max="10" step=".1">
+                <input type="number" name="gradeThree" class="numb" id="iGradeThree" required min="1" max="10" step=".1" onblur="numbValidate(this)">
             </div>
             <div class="line-form btns">
                 <button type="button" id="calc">Calculate</button>

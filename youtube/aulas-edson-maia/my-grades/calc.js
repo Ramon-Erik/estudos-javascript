@@ -35,3 +35,15 @@ btnCalculate.addEventListener('click', () => {
     });
     showMedia(grades)
 })
+
+function numbValidate(element) {
+    if (Number(element.value) > 10 || Number(element.value) < 0) {
+        divMedia.style.display = 'block'
+        element.value = 0
+        divMedia.innerHTML = 'Coloque valores validos, entre 0 e 10'
+        divMedia.style.backgroundColor = 'red'
+        setTimeout(() => {
+            divMedia.style.display = 'none'
+        }, 2900);
+    }
+}

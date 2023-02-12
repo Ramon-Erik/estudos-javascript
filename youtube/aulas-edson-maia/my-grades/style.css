@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: darkgreen;
+    background-color: #2e5fbb;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
@@ -65,6 +65,9 @@ main #media {
     border-radius: 10px;
     width: 80%;
     padding: 2px;
+    transition: .5s;
 }
 
-/* classes to be added with js */
+#media p {
+    margin: 2px;
+}
