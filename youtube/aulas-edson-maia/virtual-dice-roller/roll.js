@@ -9,7 +9,8 @@ function playSound() {
 
 function roll() {
     btnR.style.display = 'none'
-    let n = parseInt(Math.random()*7)
+    img.classList.add('dice-rotate')
+    let n = parseInt(Math.random() * 7)
     if (n == 0) {
         n++
     } else if (n > 6) {
@@ -18,6 +19,7 @@ function roll() {
     img.src = `assets/dice/${n}.png`
     number.innerText = n
     setTimeout(() => {
-    btnR.style.display = 'inline-block'
-    },2000)
+        btnR.style.display = 'inline-block'
+        img.classList.remove('dice-rotate')
+    }, 2000)
 }

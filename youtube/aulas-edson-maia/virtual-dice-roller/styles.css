@@ -52,3 +52,8 @@ main button#rollerBtn {
     color: white;
     font: inherit;
 }
+
+.dice-rotate {
+    transform: rotateY(360deg);
+    transition: all 1s ease;
+}
