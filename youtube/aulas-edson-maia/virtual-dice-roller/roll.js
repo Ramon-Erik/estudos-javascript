@@ -1,9 +1,10 @@
 let number = document.querySelector('#number')
 let btnR = document.querySelector('#rollerBtn')
 let img = document.querySelector('.dice>img')
+let audio = new Audio('assets/songs/dado-rolando.mp3')
+audio.preload
 
 function playSound() {
-    let audio = new Audio('assets/songs/dado-rolando.mp3')
     audio.play()
 }
 

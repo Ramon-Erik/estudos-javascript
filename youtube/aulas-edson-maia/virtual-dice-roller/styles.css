@@ -51,6 +51,13 @@ main button#rollerBtn {
     background-color: #E87100;
     color: white;
     font: inherit;
+    transition: all .5s ease;
+}
+
+main button#rollerBtn:hover {
+    height: 49px;
+    width: 60px;
+    box-shadow: 0px 1px 10px 5px #ff8a1ca1;
 }
 
 .dice-rotate {
