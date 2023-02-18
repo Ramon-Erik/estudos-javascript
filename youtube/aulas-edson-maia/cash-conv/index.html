@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Conversor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Know how many cash you have</h1>
+        <form>
+            <div class="row">
+                <label for="iCash">$</label>
+                <input type="number" name="cash" id="iCash">
+            </div>
+            <div class="row">
+                <input type="radio" name="cashType" id="iBrl">
+                <label for="iBrl">BRL</label>
+                
+                <input type="radio" name="cashType" id="iBit">
+                <label for="iBit">Bitcoin</label>
+
+                <input type="radio" name="cashType" id="iLib">
+                <label for="iLib">Libre</label>
+
+                <input type="radio" name="cashType" id="iEur">
+                <label for="iEur">Euro</label>
+            </div>
+            <div class="row">
+                <button type="button">Convert</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+        <div class="row coins">
+            <img class="coin" src="imgs/cash/dolar.png" alt="dollar cents img" >
+            <img class="coin" id="choosed" src="imgs/cash/real.png" alt="brazilian cents img">
+        </div>
+    </main>
+    <footer>
+        <p>
+            Developed by Ramon-Erik
+        </p>
+    </footer>
+</body>
+</html>
