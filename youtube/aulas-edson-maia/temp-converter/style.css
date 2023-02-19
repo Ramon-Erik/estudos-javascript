@@ -41,4 +41,5 @@ main .row {
 main textarea {
     resize: none;
     font: inherit;
+    cursor: not-allowed;
 }
