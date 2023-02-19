@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Conversor</title>
+    <title>Cash Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <h1>Know how many cash you have</h1>
+        <h1>Know how many money you have</h1>
         <form>
             <div class="row">
                 <label for="iCash">
-                    <strong>$</strong>
+                    <strong>US$</strong>
                 </label>
                 <input type="number" name="cash" id="iCash" min="1" step=".1" required>
             </div>
@@ -24,14 +24,14 @@
                 <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iBit">
                 <label for="iBit">Bitcoin</label>
 
-                <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iLib">
-                <label for="iLib">Libre</label>
+                <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iPou">
+                <label for="iPou">Pound</label>
 
                 <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iEur">
                 <label for="iEur">Euro</label>
             </div>
             <div class="row">
-                <textarea name="valueCoverted" id="iValueCoverted" cols="20" rows="1" disabled>Click on "convert"</textarea>
+                <textarea name="valueCoverted" id="iValueCoverted" cols="25" rows="1" disabled>Click on "convert"</textarea>
             </div>
             <div class="row">
                 <button type="button" onclick="convert()">Convert</button>
@@ -48,6 +48,6 @@
             Developed by Ramon-Erik
         </p>
     </footer>
-    <script src="conversor.js"></script>
+    <script src="converter.js"></script>
 </body>
 </html>
