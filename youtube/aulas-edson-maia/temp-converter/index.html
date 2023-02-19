@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Converting celcius to other temperatures</h1>
+        <button>Clear</button>
+        <div class="temps">
+            <div class="box">
+                <div class="row">
+                    <label for="iCelcius">Celcius</label>
+                    <textarea name="celcius" id="iCelcius" cols="10" rows="1" disabled>0</textarea>
+                    <span>C°</span>
+                </div>
+                <div class="row">
+                    <span>-273.0</span>
+                    <input type="range" name="rangeC" id="iRangeC" min="-273.0" max="100.0">
+                    <span>100.0</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="row">
+                    <label for="iFahrenheit">Fahrenheit</label>
+                    <textarea name="fahrenheit" id="iFahrenheit" cols="10" rows="1" disabled>0</textarea>
+                    <span>C°</span>
+                </div>
+                <div class="row">
+                    <span>-459.4</span>
+                    <input type="range" name="rangeF" id="iRangeF" min="-459.4" max="212.0">
+                    <span>212.0</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="row">
+                    <label for="iKelvin">Kelvin</label>
+                    <textarea name="kelvin" id="iKelvin" cols="10" rows="1" disabled>0</textarea>
+                    <span>F°</span>
+                </div>
+                <div class="row">
+                    <span>0.0</span>
+                    <input type="range" name="rangeK" id="iRangeK" min="0.0" max="373.0">
+                    <span>373.0</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Developed by Ramon-Erik
+        </p>
+    </footer>
+    <script src="temperature.js"></script>
+</body>
+
+</html>
