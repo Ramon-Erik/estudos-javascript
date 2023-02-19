@@ -12,24 +12,29 @@
         <h1>Know how many cash you have</h1>
         <form>
             <div class="row">
-                <label for="iCash">$</label>
-                <input type="number" name="cash" id="iCash">
+                <label for="iCash">
+                    <strong>$</strong>
+                </label>
+                <input type="number" name="cash" id="iCash" min="1" step=".1" required>
             </div>
             <div class="row">
-                <input type="radio" name="cashType" id="iBrl">
+                <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iBrl" checked>
                 <label for="iBrl">BRL</label>
                 
-                <input type="radio" name="cashType" id="iBit">
+                <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iBit">
                 <label for="iBit">Bitcoin</label>
 
-                <input type="radio" name="cashType" id="iLib">
+                <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iLib">
                 <label for="iLib">Libre</label>
 
-                <input type="radio" name="cashType" id="iEur">
+                <input type="radio" name="cashType" onclick="changeCashImg(this)" id="iEur">
                 <label for="iEur">Euro</label>
             </div>
             <div class="row">
-                <button type="button">Convert</button>
+                <textarea name="valueCoverted" id="iValueCoverted" cols="20" rows="1" disabled>Click on "convert"</textarea>
+            </div>
+            <div class="row">
+                <button type="button" onclick="convert()">Convert</button>
                 <button type="reset">Clear</button>
             </div>
         </form>
@@ -43,5 +48,6 @@
             Developed by Ramon-Erik
         </p>
     </footer>
+    <script src="conversor.js"></script>
 </body>
 </html>
