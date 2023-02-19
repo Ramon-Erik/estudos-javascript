@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 97vh;
+    background-color: #c52323;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    box-shadow: 0px 0px 10px 5px #0000002c;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+main .points p {
+    background-color: lightgray;
+    color: black;
+    border-radius: 9px;
+    padding: 7px;
+}
+
+main .questions {
+    border: 1px solid white;
+    padding: 7px;
+}
+
+main .question .num {
+    border-radius: 50%;
+    width:  30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+} 
+
+main button {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: left;
+}
