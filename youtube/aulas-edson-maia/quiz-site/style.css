@@ -31,6 +31,16 @@ main .questions {
 
 main .question .num-quest {
     color: #000000;
+    animation: rotateB 7s ease infinite alternate;
+}
+
+@keyframes rotateB {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 main .question .num-quest::before {
@@ -57,7 +67,7 @@ main button {
     background-color: transparent;
     color: white;
     border: 1px solid transparent;
-    transition: all.5s ease;
+    transition: all .3s ease;
 }
 
 main button:hover {
