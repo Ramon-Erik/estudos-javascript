@@ -1,11 +1,14 @@
+// let infoPage = document.querySelector('.info > span')
+// let quest = document.querySelector('.question > h4')
+// let options = document.querySelectorAll('.option')
 let questions = [
-    [
+    [ //q1
         'Wich language is from Guido Van Rossum?',
+        'Python.',
         'C++',
-        'JavaScript',
-        'Python.'
+        'JavaScript'
     ],
-    [
+    [ //q2
         'Who is the father of..?',
         'Alan Turing.',
         'Rasmus Lerdof',
@@ -14,29 +17,26 @@ let questions = [
 ]
 
 let nQuest
-let quest = document.querySelector('.question > h4')
-let infoPage = document.querySelector('.info > p')
-let options = document.querySelectorAll('.option')
+let points = document.querySelector('.points > p')
 
 function next() {
     console.log('next')
 }
 
+function points() {
+    return
+}
+
 function verify(btn) {
     nQuest = Number(document.querySelector('.num-quest').innerText) - 1
-    for (let c = 1; c < 4; c++) {
-        console.log(btn.innerText+'.' + '  ' + questions[nQuest][c])
-        if (btn.innerText+'.' == questions[nQuest][c]) {
-            console.log('ok')
-            btn.style.backgroundColor = 'green'
-            next()
-            break
-        } else {
-            console.log('not ok')
-            btn.style.backgroundColor = 'red'
-            setTimeout(() => {
-                btn.style.backgroundColor = 'transparent'
-            },1200)
-        }
+    if (btn.innerText + '.' == questions[nQuest][1]) {
+        btn.style.backgroundColor = 'green'
+        console.log(Number(points.innerText))
+        next()
+    } else {
+        btn.style.backgroundColor = 'red'
+        setTimeout(() => {
+            btn.style.backgroundColor = 'transparent'
+        }, 1200)
     }
 }
