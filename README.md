@@ -8,9 +8,13 @@ Aqui segue uma lista de exercicíos do curso resolvidos por mim:
 
 - [ex014 - Hora do dia](https://ramon-erik.github.io/estudos-javascript/curso-em-video/aula12ex/ex014/index.html)
 
+![image](https://user-images.githubusercontent.com/84084404/220776229-be069aab-f4ac-46cd-b4e9-b2fbc5f25411.png)
+
   Neste exercicío, o site pega por meio de um script a hora atual e configura um background e imagem do horario.
 
 - [ex015 - Verificador de idades](https://ramon-erik.github.io/estudos-javascript/curso-em-video/aula12ex/ex015/index.html)
+
+![image](https://user-images.githubusercontent.com/84084404/220776114-376b5796-1fe8-457c-afd2-0e21994c858f.png)
 
   Aqui vemos um site que mostra imagens referente a idade e genêro informado pelo usuario.
   
