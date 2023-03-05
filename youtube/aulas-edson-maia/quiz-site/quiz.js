@@ -66,10 +66,7 @@ function next(index) {
         // displaying the final result
     } else {
         // displaying the final result
-        options.forEach(element => {
-            element.style.display = 'none'
-            console.log(element)
-        })
+        let final
     }
 }
 
