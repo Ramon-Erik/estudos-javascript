@@ -34,33 +34,53 @@ let questions = [
     ]
 ]
 
+// this function returns an array whith x random index
+function createRandomIndex(arrayLength) {
+    arr = []
+    while (arr.length < arrayLength) {
+        let randI = Math.floor(Math.random() * arrayLength) + 1 // this line returns a number between 1 and the arrayLength
+        if (arr.indexOf(randI) < 0) {
+            arr.push(randI)
+        }
+    }
+    return arr
+}
+
 function next(index) {
     let quest = document.querySelector('.question > h4')
     let options = document.querySelectorAll('.option')
     let footerQuest = document.querySelector('.info > span')
-    if (index < 5) { // displaying questions
-        // changing the options text
+
+    // displaying questions
+    if (index < 5) {
+        // changing the options text randomly
+        let randomIndex = createRandomIndex(3)
         options.forEach((element, i) => {
             element.classList.remove('color-g')
-            element.innerText = questions[index][i + 1].replace(',', '')
+            element.innerText = questions[index][randomIndex[i]].replace(',', '')
         })
+        // changing the number and text of the question and the .info
         quest.innerText = questions[index][0]
         nQuest.innerText = ++index
         footerQuest.innerText = `Question ${index} of 5`
-    } else { // displaying the final result
+        // displaying the final result
+    } else {
+        // displaying the final result
         options.forEach(element => {
-            element.style.display = 'block'
+            element.style.display = 'none'
             console.log(element)
         })
     }
 }
 
-function fPoints(points) { // function to change the score
+// function to change the score
+function fPoints(points) {
     totPonts += points
     score.innerText = 'points: ' + totPonts
 }
 
-function verify(btn) { // verifying if the answer is correct
+// verifying if the answer is correct
+function verify(btn) {
     if (btn.innerText + ',' == questions[Number(nQuest.innerText) - 1][1]) {
         // the nummber in nQuest - 1 is th current question in the array and [1] is aways the correct awnser
         btn.classList.add('color-g')
