@@ -81,3 +81,8 @@ main .color-r, main .color-r:hover {
 main .color-g, main .color-g:hover {
     background-color: green;
 }
+
+button.btn {
+    background-color: #0059b8;
+    height: 70px;
+}
