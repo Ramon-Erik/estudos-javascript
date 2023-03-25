@@ -1,6 +1,11 @@
 let footerQuest = document.querySelector('.info > span')
 let nQuest = document.querySelector('.num-quest')
 let score = document.querySelector('.points > p')
+const songs = {
+    ap: document.querySelector('#ap'),
+    po: document.querySelector('#po'),
+    ne: document.querySelector('#ne')
+}
 let totPonts = 0
 let questions = [
     [ //q1
@@ -35,6 +40,8 @@ let questions = [
     ]
 ]
 
+
+
 // this function returns an array whith x random index
 function createRandomIndex(arrayLength) {
     arr = []
@@ -58,14 +65,16 @@ function showScore() {
     score.style.display = 'none'
     footerQuest.style.display = 'none'
     lastScreen.innerHTML = `
-        <h3>Nice one, You got to the end of the quiz</h3>
-        <p>Your score: ${totPonts}</p>
+    <h3>Nice one, You got to the end of the quiz</h3>
+    <p>Your score: ${totPonts}/50</p>
     `
     let msg
     if (totPonts >= 30) {
         msg = '<p>That\'s a very good score!</p>'
+        songs.ap.play()
     } else {
         msg = '<p>That\'s a very bad score dude!</p>'
+        songs.ne.play()
     }
     lastScreen.innerHTML += `
         ${msg}
@@ -110,11 +119,13 @@ function verify(btn) {
             fPoints(10)
             next(Number(nQuest.innerText))
         }, 1300)
+        songs.po.play()
     } else {
         btn.classList.add('color-r')
         fPoints(-10)
         setTimeout(() => {
             btn.classList.remove('color-r')
         }, 1200)
+        songs.ne.play()
     }
 }
