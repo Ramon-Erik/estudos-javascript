@@ -117,7 +117,7 @@ function verify(btn) {
         btn.classList.add('color-g')
         setTimeout(() => {
             fPoints(10)
-            next(Number(nQuest.innerText))
+            next(Number(nQuest.innerText)) 
         }, 1300)
         songs.po.play()
     } else {

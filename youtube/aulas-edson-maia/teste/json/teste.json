@@ -1,0 +1,10 @@
+{
+    "nome": "math",
+    "idade": 19,
+    "estuda": true,
+    "detalhes_estudos": {
+        "materia": ["port", "mat"],
+        "escola": "salaberga"
+    }, 
+    "apelidos": ["m", "l"]
+}
