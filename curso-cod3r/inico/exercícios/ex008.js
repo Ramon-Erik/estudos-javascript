@@ -14,10 +14,10 @@ function calcularDesempenho(pontos) {
         if (index === 0) {
             maiorPonto = ponto
             menorPonto = ponto
-        } else if (Number(ponto) > Number(maiorPonto)) {
+        } else if (parseInt(ponto) > parseInt(maiorPonto)) {
             maiorPonto = ponto
             recordes++
-        } else if (Number(ponto) < Number(menorPonto) ) {
+        } else if (parseInt(ponto) < parseInt(menorPonto) ) {
             menorPonto = ponto
             piorPartida = index + 1
         }
@@ -26,4 +26,4 @@ function calcularDesempenho(pontos) {
     return [recordes, piorPartida]
 }
 
-console.log(calcularDesempenho('10 20 20 8 25 3 0 30 1'))
+console.log(calcularDesempenho('10 20 20 8 25 3 879 0 988 30 1'))
