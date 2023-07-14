@@ -9,14 +9,14 @@ seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondame
 e o aluno será aprovado. */
 
 function classificarNota(nota) {
-    if (40 >= nota || nota + 3 >= 40) {
+    if (nota >= 40 || nota + 3 >= 40) {
         for (let i = 0; i <= 3; i++) {
-            if ((nota + i) % 5 == 0 || (nota % 5) <= 4) {
+            if ((nota + i) % 5 == 0 || 5 - (nota % 5) >= 4) {
                 return [nota + i, i]
             }
         }
     } else {
-        return ['reprovado', nota+3]
+        return ['reprovado', nota + 3]
     }
 }
 
@@ -25,3 +25,4 @@ console.log(classificarNota(30))
 console.log(classificarNota(38))
 console.log(classificarNota(88))
 console.log(classificarNota(61))
+for (let i = 0; i  < 10; i++) {console.log(classificarNota(Math.random().toFixed(2) * 100))}
