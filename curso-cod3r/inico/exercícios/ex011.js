@@ -8,18 +8,20 @@ Partindo daí elabore uma função que recebe um ano e calcula se ele é ano bis
 mensagem e retornando true ou false. */
 
 function eBisexto(ano) {
-    if (ano % 400 === 0) {
-        if (ano % 4 === 0) {
-            console.log(ano, 'é bisexto')
-            return true
-        }
+    if (ano % 4 === 0) {
+        console.log(ano, 'é bisexto')
+        return true
+    } else if (ano % 400 === 0) {
+        console.log(ano, 'é bisexto')
+        return true
+    } else {
+        console.log(ano, 'não é bisexto')
+        return false
     }
-    console.log(ano, 'não é bisexto')
-    return false
 }
 
 eBisexto(2400)
 eBisexto(2096)
 eBisexto(2016)
 eBisexto(2024)
-for (let i = 0; i  < 10; i++) {eBisexto(Math.random().toFixed(4) * 10000)}
+for (let i = 0; i < 10; i++) { eBisexto(Math.random().toFixed(4) * 10000) }
