@@ -3,11 +3,16 @@
 */
 
 function fatorial(num) {
-    for (let index = num-1; index > 0; index--) {
-        num = num * index
+    if (num > 1) {
+        for (let index = num-1; index > 0; index--) {
+            num = num * index
+        }
+        console.log(num)
+        return num
+    } else {
+        return 1
     }
-    console.log(num)
-    return num
 }
 
-fatorial(0)
+console.log(fatorial(0))
+fatorial(5)
