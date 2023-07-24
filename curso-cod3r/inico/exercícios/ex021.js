@@ -5,11 +5,11 @@
 function calcularFatura(idade) {
     if (idade <= 10) {
         return `com ${idade} anos paga R\$180,00`
-    } else if ( idade > 10 && idade <= 30) {
+    } else if (idade <= 30) {
         return `com ${idade} anos paga R\$150,00`
-    } else if (idade > 30 && idade <= 60) {
+    } else if (idade <= 60) {
         return `com ${idade} anos paga R\$195,00`
-    } else if (idade > 60) {
+    } else {
         return `com ${idade} anos paga R\$230,00`
     }
 }
