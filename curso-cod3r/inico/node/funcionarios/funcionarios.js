@@ -9,7 +9,6 @@ axios.get(url).then(response => {
 
     console.log(
         funcionarios.filter(mulheresChinesas).reduce((ac, at) => {
-            console.log(ac.salario, at.salario)
             if (ac.salario < at.salario) {
                 return ac
             } else {
