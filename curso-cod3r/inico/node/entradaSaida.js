@@ -8,7 +8,7 @@ if (anonimo) {
     process.stdout.write('informe seu nome: ')
     process.stdin.on('data', data => {
         const nome = data.toString().replace('\n', '')
-        process.stdout.write('ola', nome, '\n')
+        process.stdout.write(`olá ${nome}`)
         process.exit()
     })
 }
